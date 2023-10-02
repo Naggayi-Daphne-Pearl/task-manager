@@ -22,7 +22,7 @@ function TaskCreate() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <h2>Create Task</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -65,7 +65,7 @@ function TaskCreate() {
             className="form-control"
           />
         </div>
-        <div className="mb-3">
+        <div>
           <button type="submit" className="btn btn-primary">
             Create Task
           </button>

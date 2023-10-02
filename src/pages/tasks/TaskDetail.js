@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function TaskDetail() {
   const { taskId } = useParams(); // Get the task ID from the URL parameter
   const [task, setTask] = useState(null);
+  const navigate = useNavigate();
 
   // Simulate fetching task details based on taskId
   useEffect(() => {
@@ -21,13 +22,23 @@ function TaskDetail() {
     return <div>Loading...</div>;
   }
 
+  const handlePress = (e) => {
+    navigate("/tasks/:taskId/edit");
+  };
+
   return (
-    <div>
+    <div className="container mt-4">
       <h2>Task Detail</h2>
-      <p>Title: {task.title}</p>
-      <p>Description: {task.description}</p>
-      <p>Due Date: {task.dueDate}</p>
-      <button>Edit</button>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{task.title}</h5>
+          <p className="card-text">{task.description}</p>
+          <p className="card-text">Due Date: {task.dueDate}</p>
+          <button className="btn btn-primary" onClick={() => handlePress()}>
+            Edit
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
