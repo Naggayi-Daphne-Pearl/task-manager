@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { AuthContext } from "../../contexts/User";
 import { Row, Col, FloatingLabel } from "react-bootstrap";
-
+import Footer from "../../components/Footer";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -128,6 +128,7 @@ const Login = () => {
           </Row>
         </Form>
       </Col>
+      <Footer />
     </Row>
   );
 };
