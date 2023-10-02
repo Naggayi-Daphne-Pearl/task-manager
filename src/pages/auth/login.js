@@ -19,11 +19,11 @@ const Login = () => {
 
     const form = event.currentTarget;
     if (form.checkValidity()) {
-      if (username === "malek" && password === "mobiklinic") {
+      if (username === "malek" && password === "malek") {
         setUser({ username }); // Set the user when successfully logged in
         navigate("/dashboard");
       } else {
-        setErrorMessage("Contact Mobiklinic Admin"); // Set the error message
+        setErrorMessage("Contact Malek Akorede Admin"); // Set the error message
       }
     } else {
       setValidated(true);

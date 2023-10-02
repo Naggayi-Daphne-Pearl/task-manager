@@ -27,7 +27,7 @@ function AppBar() {
               marginRight: "10px",
             }}
           /> */}
-          Mobiklinic
+          Task Manager Project
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse
