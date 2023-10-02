@@ -12,6 +12,7 @@ import TaskCreate from "./pages/tasks/TaskCreate";
 import TaskDetail from "./pages/tasks/TaskDetail";
 import TaskEdit from "./pages/tasks/TaskEdit";
 import TaskList from "./pages/tasks/TaskList";
+import Logout from "./pages/auth/logout";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/tasks/create" element={<TaskCreate />} />
             <Route path="/tasks/:taskId" element={<TaskDetail />} />
             <Route path="/tasks/:taskId/edit" element={<TaskEdit />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
           <Footer />
         </Router>

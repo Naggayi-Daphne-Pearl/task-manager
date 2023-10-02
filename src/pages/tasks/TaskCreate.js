@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function TaskCreate() {
   const navigate = useNavigate();
@@ -22,39 +22,53 @@ function TaskCreate() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Create Task</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
+        <div className="mb-3">
+          <label htmlFor="title" className="form-label">
+            Title:
+          </label>
           <input
             type="text"
+            id="title"
             name="title"
             value={task.title}
             onChange={handleInputChange}
+            className="form-control"
             required
           />
         </div>
-        <div>
-          <label>Description:</label>
+        <div className="mb-3">
+          <label htmlFor="description" className="form-label">
+            Description:
+          </label>
           <textarea
+            id="description"
             name="description"
             value={task.description}
             onChange={handleInputChange}
+            className="form-control"
             required
           />
         </div>
-        <div>
-          <label>Due Date:</label>
+        <div className="mb-3">
+          <label htmlFor="dueDate" className="form-label">
+            Due Date:
+          </label>
           <input
             type="date"
+            id="dueDate"
             name="dueDate"
             value={task.dueDate}
             onChange={handleInputChange}
+            className="form-control"
           />
         </div>
-        <div>
-          <button type="submit">Create Task</button>
+        <div className="mb-3">
+          <button type="submit" className="btn btn-primary">
+            Create Task
+          </button>
         </div>
       </form>
     </div>

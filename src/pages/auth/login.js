@@ -21,7 +21,7 @@ const Login = () => {
     if (form.checkValidity()) {
       if (username === "malek" && password === "malek") {
         setUser({ username }); // Set the user when successfully logged in
-        navigate("/dashboard");
+        navigate("/tasks");
       } else {
         setErrorMessage("Contact Malek Akorede Admin"); // Set the error message
       }
