@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function TaskCreate() {
+function TaskCreate({ addTask }) {
   const navigate = useNavigate();
   const [task, setTask] = useState({
     title: "",
@@ -18,6 +18,7 @@ function TaskCreate() {
     e.preventDefault();
     // Implement task creation logic here (e.g., sending data to the server)
     console.log("Task created:", task);
+    addTask(task);
     navigate("/tasks"); // Redirect to the task list after creating the task
   };
 

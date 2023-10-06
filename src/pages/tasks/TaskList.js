@@ -29,7 +29,7 @@ function TaskList() {
           </li>
         ))}
       </ul>
-      <button className="btn btn-primary" onClick={() => handlePress()}>
+      <button className="btn btn-primary mt-3" onClick={() => handlePress()}>
         Create New Task
       </button>
     </div>
